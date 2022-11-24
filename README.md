@@ -1,5 +1,7 @@
 # Typed Value Provider
 
+[![Test](https://github.com/rigor789/typed-value-provider/actions/workflows/test.yml/badge.svg)](https://github.com/rigor789/typed-value-provider/actions/workflows/test.yml)
+
 This is a proof of concept for 2 utils, the base util is a typed `get` function that provides TypeScript intellisense for dot notation access, the second one bulding on top of the `get` function that combines the dot notation access with a "Value Provider".
 
 A Value Provider can be a direct value (ie. `someValue: 42`), a function that returns the value (ie. `someValue: () => 42`) or a function that returns a Promise/async function (ie. `someValue: async () => 42`).
