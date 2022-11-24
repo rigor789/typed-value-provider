@@ -6,6 +6,10 @@ A Value Provider can be a direct value (ie. `someValue: 42`), a function that re
 
 Definining a Value Provider returns a `get` function that accepts a dot notated path and returns the resolved value at a given path. In case a resolved value contains inner value providers, they are automatically unwrapped.
 
+## Demo
+
+https://user-images.githubusercontent.com/879060/203845216-569a91d1-cbe4-46bd-a674-e6d406034347.mov
+
 ## API
 
 ### get
@@ -27,3 +31,6 @@ defineValueProvider<{
   someValue: async () => await getSomeValue();
 })
 ```
+
+
+
