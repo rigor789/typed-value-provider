@@ -33,7 +33,7 @@ const demoValueProvider = {
 
 async function demo() {
   // get helper intellisense, try changing the path, it should offer autocompletion!
-  const value = get(demoObjectSimple, "nestedObject.numberValue");
+  const value = await get(demoObjectSimple, "nestedObject.numberValue");
   // type of value should be correctly inferred
 
   console.log(value === 456);
