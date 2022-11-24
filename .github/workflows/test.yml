@@ -18,3 +18,5 @@ jobs:
           cache: 'yarn'
       - run: yarn
       - run: yarn test
+      - uses:  davelosert/vitest-coverage-report-action@v1
+        if: always()

@@ -12,4 +12,10 @@ export default defineConfig({
     },
   },
   plugins: [dts()],
+
+  test: {
+    coverage: {
+      reporter: ["text", "lcov", "json-summary", "json"],
+    },
+  },
 });
