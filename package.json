@@ -5,9 +5,8 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "dev": "vitest",
-    "coverage": "vitest --coverage",
     "build": "vite build",
     "prepack": "yarn test && yarn build"
   },
