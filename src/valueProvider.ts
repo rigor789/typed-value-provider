@@ -13,8 +13,10 @@ type ValueProvider<T> = T extends PrimitiveValue
   ? ValueOrPromiseOrFunction<T>
   : ObjectValueProvider<T>;
 
+type Unwrap<T> = T extends ValueOrPromiseOrFunction<infer K> ? K : T;
+
 interface ValueP<T> {
-  get<P extends Path<T>>(path?: P): Promise<PathValue<T, P>>;
+  get<P extends Path<T>>(path?: P): Promise<Unwrap<PathValue<T, P>>>;
 }
 
 async function getValue<T>(provider: ValueProvider<T>): Promise<T> {
